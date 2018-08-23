@@ -36,10 +36,11 @@ public class Bot implements Runnable {
   private int sound;
   private boolean medium;
   private int maxNotFound = 0;
+  public long remain = 0;
   Controller controller;
 
-  public Bot(Properties properties,int run) {
-  runtime = run;
+  public Bot(Properties properties,int run1) {
+  runtime = run1;
     System.out.println("############READING SETTINGS");
 
     //runtime
@@ -203,7 +204,7 @@ public class Bot implements Runnable {
 
         //main loop
         while (current < end) {
-
+          setRemainingMin(current,end);
           //take screenshot
           currentSS = new Robot().createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 
@@ -850,4 +851,11 @@ public class Bot implements Runnable {
     }
 
   }
+  public void setRemainingMin(long currente,long ende){
+    remain = (ende - currente)/(60*1000);
+  }
+  public long getRemain(){
+    return remain;
+  }
+
 }

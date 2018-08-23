@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="davin.Controller">
    <children>
       <GridPane layoutX="143.0" layoutY="174.0" prefHeight="485.0" prefWidth="624.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -52,7 +51,7 @@
                <children>
                   <Pane prefHeight="53.0" prefWidth="286.0">
                      <children>
-                        <Label layoutX="103.0" layoutY="11.0" text="20M remaining" textFill="#0003d0" />
+                        <Label fx:id="lbl_remain" layoutX="103.0" layoutY="11.0" text="20M remaining" textFill="#0003d0" />
                      </children>
                   </Pane>
                   <GridPane GridPane.rowIndex="1">
@@ -78,7 +77,7 @@
                         <Insets left="50.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#pause" text="Pause" GridPane.rowIndex="2">
+                  <Button fx:id="btn_pause" mnemonicParsing="false" onAction="#pause" text="Pause" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="105.0" />
                      </GridPane.margin>
